@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Barlow+Condensed:wght@600&display=swap">
 <style>
 :root{--bg:#FFFFFF;--text:#141414;--muted:#65676B;--link:#1258B8;--edge:#E4E6EB;--mark:#FBB214;--sign:#01513A}
-@media (prefers-color-scheme: dark){:root{--bg:#0E1013;--text:#F3F4F6;--muted:#B9BEC6;--link:#7DB0F5;--edge:#3A3F48;--mark:#E0A526;--sign:#01513A}}
+@media (prefers-color-scheme: dark){:root{--bg:#0E1013;--text:#F3F4F6;--muted:#B9BEC6;--link:#9CC3F7;--edge:#3A3F48;--mark:#E0A526;--sign:#01513A}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:18px/1.55 'Atkinson Hyperlegible Next',system-ui,sans-serif}
 main{max-width:40rem;margin:0 auto;padding:24px 16px 64px;overflow-wrap:anywhere}
@@ -22,9 +22,9 @@ nav a{display:inline-block;min-height:48px;line-height:48px;margin-right:20px}
 </style></head>
 <body><main>
 <p class="brand">Centline</p>
-<p class="draft">DRAFT for review. Not reviewed by a lawyer.</p>
+
 <h1>Privacy policy</h1>
-<p class="meta">Draft 3, updated 2026-11-07</p>
+<p class="meta">Draft 6, updated 2026-11-13</p>
 <h2>Who we are</h2>
 <p>Centline is an app for owner operators and small carriers, made by Centline LLC, a Iowa limited liability company (&quot;we&quot;). In the App Store and Google Play, Centline is published by David Guillermo Martinez for Centline LLC. This policy says what Centline keeps, why, who else handles it, and how to have it deleted. Questions go to support@centline.co.</p>
 <h2>What Centline keeps</h2>
@@ -33,6 +33,9 @@ nav a{display:inline-block;min-height:48px;line-height:48px;margin-right:20px}
 <p>Your business: its name, MC number and base state, its trucks, and who drives for it.</p>
 <p>Your trips: odometer readings, the states you cross, the days and times you type, deliveries, deadhead and the notes you add.</p>
 <p>Your money: money in and money out, with the category, amount, broker, load number and who was paid.</p>
+<p>Your loads and invoices: the broker, load number, rate, stops and days of each load, the invoices you make and what was paid on them.</p>
+<p>Your broker book: each broker's name, invoice email and billing address.</p>
+<p>Papers you add: signed BOLs, rate confirmations, lumper receipts and dock times, your W-9 (it shows your tax ID), insurance certificate, authority letter, voided check (it shows your bank account and routing numbers) and signature, and a driver's CDL and medical card. Treat them as private.</p>
 <p>Receipt photos you take or pick, and the numbers saved from them. A receipt can show part of a card number, a name or an address, so treat it as private.</p>
 <p>The weekly trip records you send and the IFTA quarters you file, kept as they were sent.</p>
 <p>A record of changes: who changed what and when, so a record can be trusted in an audit.</p>
@@ -43,28 +46,31 @@ nav a{display:inline-block;min-height:48px;line-height:48px;margin-right:20px}
 <p>Centline does not use GPS or track where your phone is. The states on a trip are the ones you enter.</p>
 <p>No ads, no tracking across other apps or websites, no selling or renting your information, and no analytics tools.</p>
 <h2>Who else handles your information</h2>
-<p>Supabase runs our database, sign in and file storage. Everything above is stored there. Receipt photos are in private storage and open only through links that expire in minutes.</p>
+<p>Supabase runs our database, sign in and file storage. Everything above is stored there. Receipt photos and papers are in private storage and open only through links that expire in minutes.</p>
 <p>Each night GitHub runs a job that makes a locked copy of everything above, and Cloudflare stores it. Only we hold the key that opens it. Each copy is deleted within 30 days.</p>
-<p>Anthropic, the company that makes Claude, reads receipt photos, but only if you say Yes when Centline asks. Centline sends the photo of the receipt and Claude reads the date, total, gallons and state. You check every number before it is saved. Under Anthropic's commercial terms, Anthropic may not train its models on what we send. Anthropic says it deletes what it receives within 30 days, unless it must keep it longer to enforce its usage policy or by law. You can change your answer at any time in Settings, under &quot;Centline reads receipts&quot;. With No, you type the numbers yourself and no photo is sent to Anthropic.</p>
+<p>Anthropic, the company that makes Claude, reads receipt photos and rate confirmations, but only if you say Yes when Centline asks. Each person who signs in answers for themselves; an owner's Yes is not a driver's. For a receipt, Centline sends the photo and Claude reads the date, total, gallons and state. For a rate confirmation, Centline sends the whole rate confirmation, every page of it, with whatever is printed on it, such as a driver's name and phone, the truck number and the MC number, and Claude reads the broker, load number, rate, stops and days. Only a paper marked as a rate confirmation is sent; no other paper is ever sent to Anthropic. You check every number before it is saved. Under Anthropic's commercial terms, Anthropic may not train its models on what we send. Anthropic says it deletes what it receives within 30 days, unless it must keep it longer to enforce its usage policy or by law. You can change your answer at any time in Settings, under &quot;Centline reads receipts and rate confirmations&quot;. With No, you type the numbers yourself and nothing is sent to Anthropic.</p>
 <p>Sentry receives crash reports so we can fix what breaks: the phone model, its system version, the app version and where in the app the crash happened. Before a report leaves your phone, Centline removes email addresses, links and long numbers. Crash reports are not tied to your account.</p>
 <p>Each of these companies handles your information only to provide its service to us, under its own terms, which protect it at least as well as this policy.</p>
 <h2>Who in your business sees what</h2>
 <p>A business only ever sees its own information.</p>
 <p>An owner sees everything in the business, including the trips, miles, fuel and fuel receipts of drivers in it.</p>
 <p>A driver sees his own trips and his own money. A driver's other money is not shown to the owner; his fuel is, because the business needs it for IFTA.</p>
+<p>An owner sees every paper in the business, a driver's CDL and medical card included. A driver sees the papers he added and every paper on his own loads.</p>
 <h2>When your information is shared</h2>
-<p>Only with the companies named above, when you send a weekly trip record or other file yourself to someone you choose, or when the law requires it. If we are ever required by law to hand over your information, we will tell you unless the law forbids it.</p>
+<p>Only with the companies named above, when you send a weekly trip record or other file yourself to someone you choose, such as when you send an invoice and its papers to a broker yourself, or when the law requires it. If we are ever required by law to hand over your information, we will tell you unless the law forbids it.</p>
 <h2>How long it is kept</h2>
-<p>Your business's information is kept until the owner deletes the business. Deleting a receipt in the app hides it, but the photo is kept for an audit until the business is deleted.</p>
-<p>IFTA asks carriers to keep their records for 4 years. Save copies of anything you may need before deleting a business.</p>
+<p>Your business's information is kept until the owner deletes the business. Deleting a receipt or a paper in the app hides it, but the file is kept for an audit until the business is deleted.</p>
+<p>IFTA asks carriers to keep their records for 4 years, and the law asks a carrier to keep a driver's CDL and medical card for 3 years after he leaves. So when a business is deleted, Centline keeps those records locked away for that long, then deletes them (Deleting your account says which). Save copies of anything you may need before deleting a business.</p>
 <h2>Deleting your account</h2>
 <p>You can delete your account in the app: Settings, Delete my account. You can also write to support@centline.co from the email address you sign in with.</p>
-<p>When an owner deletes his account, every business he alone owns closes at once. For 7 days it is read only: he and his drivers can still make their file, and he can undo it by signing in. Then everything in it is deleted: trips, money, receipt photos, records and the sign ins of everyone in it. Copies we keep are gone within 30 days.</p>
+<p>When an owner deletes his account, every business he alone owns closes at once. For 7 days it is read only: he and his drivers can still make their file, and he can undo it by signing in. Then the business is deleted: loads, invoices, brokers, weekly trip records, other papers and the sign ins of everyone in it. Copies we keep are gone within 30 days.</p>
+<p>Some records of a deleted business are kept longer, because the law asks a carrier to keep them. Its trips, odometer readings, money, receipts and receipt photos, and filed IFTA quarters are kept 4 years after the quarter they belong to was due or filed, or 4 years after the business closed for a quarter not filed in Centline. Its drivers' CDL and medical cards are kept 3 years after it closed. They are locked away: no one can open them in the app, the owner included. Then they are deleted, and copies we keep are gone within 30 days. If you need them for an audit, write to support@centline.co.</p>
 <p>A driver in a deleted business keeps his sign in if he belongs to another business. If not, his sign in is deleted too.</p>
-<p>When a driver deletes his account, his sign in and his name are deleted. The trips and fuel he entered stay with the business, because they are the business's IFTA records. His name stays on weekly trip records already sent, because a sent record is kept as it was sent.</p>
+<p>When a driver deletes his account, his sign in and his name are deleted. The trips and fuel he entered stay with the business, because they are the business's IFTA records. His CDL and medical card stay with the business for 3 years after he deletes his account, because the law asks a carrier to keep them that long, and are then deleted. If the business is deleted, they are kept locked away for 3 years from that day or from the day he deleted his account, whichever is later. Other papers he added stay with the business until it is deleted. His name stays on weekly trip records already sent, because a sent record is kept as it was sent.</p>
 <p>More at <a href="https://dmartinez10.github.io/centline-legal/delete.html">https://dmartinez10.github.io/centline-legal/delete.html</a>.</p>
 <h2>Your choices</h2>
 <p>You can change the Centline answer, turn app lock on or off, and sign out on every phone, all in Settings.</p>
+<p>You can make a copy of your information yourself: Settings, Export my data.</p>
 <p>You can ask for a copy of your information, or ask us to correct it, by writing to support@centline.co. We answer within 30 days.</p>
 <h2>Security</h2>
 <p>Each business is locked off from every other one in our database, and every change is checked on our server. No system is perfect; if your information is ever exposed, we will tell you as the law requires.</p>
